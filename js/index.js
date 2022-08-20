@@ -90,3 +90,5 @@ function newQuestion() {
 	})
 	$("#question").fadeIn(animDelay)
 }
+
+newQuestion()
