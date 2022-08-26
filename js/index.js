@@ -81,12 +81,42 @@ var questions = [
     "If you could be cryogenically frozen and woken up in 1,000 years, would you choose to do it?",
     "What product would you stockpile if you learned that they were about to stop producing it?",
     "If you could choose any superpower, what would it be?",
-    "If you were extremely wealthy, what eccentricities and rich activities would you indulge in?"
+    "If you were extremely wealthy, what eccentricities and rich activities would you indulge in?",
+	"What color sheets do you have?",
+	"How many dead pets do you have?",
+	"Weight?",
+	"Height?",
+	"Age?",
+	"Gender?",
+	"Where are you from?",
+	"First Name?",
+	"Last Name?",
+	"Birthday?",
+	"Who do you follow?",
+	"Middle Name?",
+	"Main Language?",
+	"Zodiac Sign?",
+	"Favorite Song?",
+	"Hair Style?",
+	"Hair Length?",
+	"Hair Color?",
+	"Favorite Number?",
+	"Dream Vacation?",
+	"Eye Color?",
+	"Body Style?",
+	"Favorite Food?",
+	"Favorite Movie?",
+	"Favorite TV Show?",
+	"Favorite Video Game?",
+	"Favorite Song?",
+	"Favorite Music Genre?"
 ]
 
 function newQuestion() {
 	$("#question").fadeOut(animDelay, () => {
-		$("#question").html(questions[Math.floor(Math.random() * questions.length)])
+		let index = Math.floor(Math.random() * questions.length)
+		$("#question").html(questions[index])
+		questions.splice(index, 1)
 	})
 	$("#question").fadeIn(animDelay)
 }
